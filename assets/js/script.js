@@ -1,4 +1,24 @@
 (() => {
+  const counterButton = document.querySelector('#counter-button');
+  const counterValue = document.querySelector('#counter-value');
+  const datetime = document.querySelector('#current-datetime');
+  let count = 0;
+
+  const updateDateTime = () => {
+    datetime.textContent = new Intl.DateTimeFormat(undefined, {
+      dateStyle: 'full',
+      timeStyle: 'medium',
+    }).format(new Date());
+  };
+
+  counterButton.addEventListener('click', () => {
+    count += 1;
+    counterValue.textContent = count;
+  });
+
+  updateDateTime();
+  window.setInterval(updateDateTime, 1000);
+
   const colors = [
     '#8839ef', // mauve
     '#1e66f5', // blue
