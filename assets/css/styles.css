@@ -25,10 +25,7 @@ body {
   width: min(90vw, 37rem);
   padding: clamp(2rem, 7vw, 4.5rem);
   text-align: center;
-  background: color-mix(in srgb, var(--ctp-latte-mantle) 78%, white);
-  border: 1px solid var(--ctp-latte-surface0);
   border-radius: 2rem;
-  box-shadow: 0 1.25rem 3.75rem color-mix(in srgb, var(--ctp-latte-text) 16%, transparent);
 }
 
 .hello-image {
